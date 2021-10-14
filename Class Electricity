@@ -1,0 +1,96 @@
+/* An electricity board charges the following rates to domestic users to discourage large consumption of energy:
+For the first 30 units - 1.50/- per unit
+For next 200 units - 3.00/- per unit
+Beyond 300 units - 4.25/- per unit
+
+Create a class ElectricityBill for atleast 5 users with following opeartions. 
+Write a program to read the name of the user and number of units consumed and print out the charges with names. 
+If the total amount is more than Rs. 500.00 then an additional surcharge of 15% is added. */
+
+#include<iostream>
+using namespace std;
+
+class electricity
+{
+	private:
+    char name[50];
+    float unit, amount;
+	public:
+    void display()
+    {
+    cout<<"Enter the user name : "<<endl;
+    cin>>name;
+    cout<<"Enter the unit consumed : "<<endl;
+    cin>>unit;
+
+    if(unit<=30)	
+    amount=unit*1.50;
+    else if(30<unit<=230)
+    amount=unit*3.00;
+    else if(unit>300)
+    amount=unit*4.25;
+
+    if(amount>500)
+    amount=amount+amount*0.15;
+    cout<<"--------Electricity Bill---------"<<endl<<"Name = "<< name<<endl<<"Unit = "<< unit<<endl<< "Amount = "<< amount<<endl<<endl;
+    }
+ };
+
+int main()
+{
+int i;
+electricity e;
+	for(i=0;i<5;i++)
+	{
+	e.display();
+	}
+return 0;
+}
+
+/*
+OUTPUT:
+Enter the user name : 
+Sai
+Enter the unit consumed : 
+66
+--------Electricity Bill---------
+Name = Sai
+Unit = 66
+Amount = 198
+
+Enter the user name : 
+Raj
+Enter the unit consumed : 
+77
+--------Electricity Bill---------
+Name = Raj
+Unit = 77
+Amount = 231
+
+Enter the user name : 
+John
+Enter the unit consumed : 
+180
+--------Electricity Bill---------
+Name = John
+Unit = 180
+Amount = 621
+
+Enter the user name : 
+Rushi
+Enter the unit consumed : 
+111
+--------Electricity Bill---------
+Name = Rushi
+Unit = 111
+Amount = 333
+
+Enter the user name : 
+Shreya
+Enter the unit consumed : 
+500
+--------Electricity Bill---------
+Name = Shreya
+Unit = 500
+Amount = 1725
+*/
