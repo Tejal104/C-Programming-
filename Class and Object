@@ -1,0 +1,239 @@
+/* Create the following classes and write their appropriate class members and display proper information to user.
+a) Time b) Date c) Person d) Student e) Fan f) Point g)Box */
+
+#include<iostream>
+using namespace std;
+
+class person
+{
+	 int age;
+	 char name[30];
+	public:
+		void get_details()
+		{
+		cout<<"----Enter Person Details----"<<endl;
+		cout<<"Enter age"<<endl;
+		cin>>age;
+		cout<<"Enter name"<<endl;
+		cin>>name;
+		}
+		void display_details()
+		{
+		cout<<"Age = "<<age<<endl;
+		cout<<"Name = "<<name<<endl;
+		}
+};
+
+class time1
+{
+	int h,m,s;
+	public:
+		void get_time()
+			{
+			cout<<"----Enter Time Details----"<<endl;
+			cout<<"Enter hour"<<endl;
+			cin>>h;
+			cout<<"Enter minutes"<<endl;
+			cin>>m;
+			cout<<"Enter seconds"<<endl;
+			cin>>s;
+			}
+		void display_time()
+			{
+			cout<<"Time is "<<h<<":"<<m<<":"<<s<<endl;
+			}
+};
+
+class Date1
+{
+	int dd,mm,yy;
+	public:
+		void get_date()
+			{
+			cout<<"----Enter Date Details----"<<endl;
+			cout<<"Enter date"<<endl;
+			cin>>dd;
+			cout<<"Enter month"<<endl;
+			cin>>mm;
+			cout<<"Enter year"<<endl;
+			cin>>yy;
+			}
+		void display_date()
+			{
+			cout<<"Date is "<<dd<<"/"<<mm<<"/"<<yy<<endl;
+			}
+};
+
+class student
+{
+	 int id;
+	 char name[30];
+	 float marks;
+	public:
+		void get_stud_details()
+		{
+		cout<<"----Enter Student Details----"<<endl;
+		cout<<"Enter id"<<endl;
+		cin>>id;
+		cout<<"Enter name"<<endl;
+		cin>>name;
+		cout<<"Enter marks"<<endl;
+		cin>>marks;
+		}
+		void display_stud_details()
+		{
+		cout<<"I'd = "<<id<<endl;
+		cout<<"Name = "<<name<<endl;
+		cout<<"Marks = "<<marks<<endl;
+		}
+};
+
+class fan
+{
+	 char company_name[30];
+	 float prise;
+	public:
+		void get_fan_details()
+		{
+		cout<<"----Enter Fan Details----"<<endl;
+		cout<<"Enter Company name"<<endl;
+		cin>>company_name;
+		cout<<"Enter prise"<<endl;
+		cin>>prise;
+		}
+		void display_fan_details()
+		{
+		cout<<"Brand = "<<company_name<<endl;
+		cout<<"Prise = "<<prise<<endl;
+		}
+};
+
+class point
+{
+	 float size;
+	 char color[30];
+	public:
+		void get_pt()
+		{
+		cout<<"----Enter Point Details----"<<endl;
+		cout<<"Enter size"<<endl;
+		cin>>size;
+		cout<<"Enter color"<<endl;
+		cin>>color;
+		}
+		void display_pt()
+		{
+		cout<<"Size = "<<size<<endl;
+		cout<<"Color = "<<color<<endl;
+		}
+};
+
+class box
+{
+	 float size;
+	 char color[30];
+	public:
+		void get_box()
+		{
+		cout<<"----Enter Box Details----"<<endl;
+		cout<<"Enter size"<<endl;
+		cin>>size;
+		cout<<"Enter color"<<endl;
+		cin>>color;
+		}
+		void display_box()
+		{
+		cout<<"Size = "<<size<<endl;
+		cout<<"Color = "<<color<<endl;
+		}
+};
+
+int main()
+{
+person p;
+p.get_details();
+p.display_details();
+
+time1 t;
+t.get_time();
+t.display_time();
+
+Date1 dt;
+dt.get_date();
+dt.display_date();
+
+student stud;
+stud.get_stud_details();
+stud.display_stud_details();
+
+fan f;
+f.get_fan_details();
+f.display_fan_details();
+
+point pt;
+pt.get_pt();
+pt.display_pt();
+
+box b;
+b.get_box();
+b.display_box();
+return 0;
+}
+
+/*
+OUTPUT:
+----Enter Person Details----
+Enter age
+21
+Enter name
+Nayan
+Age = 21
+Name = Nayan
+----Enter Time Details----
+Enter hour
+12
+Enter minutes
+15
+Enter seconds
+00
+Time is 12:15:0
+----Enter Date Details----
+Enter date
+12
+Enter month
+10
+Enter year
+2021
+Date is 12/10/2021
+----Enter Student Details----
+Enter id
+1
+Enter name
+Pooja
+Enter marks
+45
+I'd = 1
+Name = Pooja
+Marks = 45
+----Enter Fan Details----
+Enter Company name
+Bajaj
+Enter prise
+5000
+Brand = Bajaj
+Prise = 5000
+----Enter Point Details----
+Enter size
+50
+Enter color
+red
+Size = 50
+Color = red
+----Enter Box Details----
+Enter size
+24
+Enter color
+blue
+Size = 24
+Color = blue
+*/
