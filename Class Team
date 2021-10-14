@@ -1,0 +1,123 @@
+/* Create a class Team as follows with following data members such as - Accept 5 different records in array and display the records in table format */
+
+#include<iostream>
+using namespace std;
+
+class team
+{
+	 int age, match;
+	 char country[30], name[30];
+	 float bat_avg, ball_avg;
+	 
+	public:
+		void get_details()
+		{
+		cout<<"Enter country name :"<<endl;
+		cin>>country;
+		cout<<"Enter player name :"<<endl;
+		cin>>name;
+		cout<<"Enter no of mathes :"<<endl;
+		cin>>match;
+		cout<<"Enter the age of player :"<<endl;
+		cin>>age;
+		cout<<"Enter batting average"<<endl;
+		cin>>bat_avg;
+		cout<<"Enter balling average"<<endl;
+		cin>>ball_avg;
+		
+		}
+		void display_details()
+		{
+		cout<<"\t"<<country<<"\t\t"<<name<<"\t\t"<<match<<"\t\t"<<age<<"\t\t"<<bat_avg<<"\t\t"<<ball_avg<<endl;
+		}
+};
+
+int main()
+{
+int n,i;
+team t[5];
+cout<<"How many records do you wanna enter?"<<endl;
+cin>>n;
+  for(i=0;i<n;i++)
+  {
+  t[i].get_details();
+  }
+cout<<"\tCountry Name"<<"\tPlayer Name"<<"\tMatches"<<"\tAge"<<"\tBatting Average"<<"\tBalling Average"<<endl;
+  for(i=0;i<n;i++)
+  {
+  t[i].display_details();
+  }
+return 0;
+}
+
+/*
+OUTPUTt:
+How many records do you wanna enter?
+5
+Enter country name :
+India
+Enter player name :
+Virat
+Enter no of mathes :
+67
+Enter the age of player :
+32
+Enter batting average
+53.33
+Enter balling average
+58.50
+Enter country name :
+Austrelia
+Enter player name :
+Steven
+Enter no of mathes :
+50
+Enter the age of player :
+33
+Enter batting average
+52.50
+Enter balling average
+49.33
+Enter country name :
+America
+Enter player name :
+John
+Enter no of mathes :
+55
+Enter the age of player :
+37
+Enter batting average
+55.67 
+Enter balling average
+53.70
+Enter country name :
+Shrilanka
+Enter player name :
+Hemant
+Enter no of mathes :
+40
+Enter the age of player :
+33
+Enter batting average
+44.6
+Enter balling average
+50.90
+Enter country name :
+Africa   
+Enter player name :
+Gourge
+Enter no of mathes :
+30
+Enter the age of player :
+45
+Enter batting average
+60.54
+Enter balling average
+55.39
+	Country Name	Player Name	Matches	Age	Batting Average	Balling Average
+	India		Virat		67		32		53.33	    58.5
+	Austrelia	Steven		50		33		52.5		49.33
+	America	    John		55		37		55.67		53.7
+	Shrilanka	Hemant		40		33		44.6		50.9
+	Africa		Gourge		30		45		60.54		55.39
+*/
