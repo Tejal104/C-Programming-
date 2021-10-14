@@ -1,0 +1,54 @@
+/* Write a program to implement a telephone bill class with Name, Address, Tel. No., No. of calls as data members. Compute the amount to be paid if the charges per call is Rs. 2/- */
+
+#include<iostream>
+using namespace std;
+
+class telephone
+{
+	private:
+    char name[30], add[30];
+    int calls, amount;
+    long int  contact;
+
+	public:
+    void display()
+    {
+    cout<<"Enter name : "<<endl;
+    cin>>name;
+    cout<<"Enter address : "<<endl;
+    cin>>add;
+    cout<<"Enter contact no. : "<<endl;
+    cin>>contact;
+    cout<<"Enter no of calls : "<<endl;
+    cin>>calls;
+
+    amount = calls*2;
+
+    cout<<"--------Telephone Bill---------"<<endl<<"Name = "<< name <<endl<<"Address = "<< add <<endl<<"Contact no. = "<< contact <<endl<<"No. of calls = "<< calls <<endl<<"Amount to be paid = "<< amount <<"Rs."<<endl;
+	  }
+};
+
+int main()
+{
+telephone t;
+t.display();
+return 0;
+}
+
+/*
+OUTPUT:
+Enter name : 
+John
+Enter address : 
+Pune
+Enter contact no. : 
+9876543216
+Enter no of calls : 
+500
+--------Telephone Bill---------
+Name = John
+Address = Pune
+Contact no. = 9876543216
+No. of calls = 500
+Amount to be paid  = 1000Rs.
+*/
