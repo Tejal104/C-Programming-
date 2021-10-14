@@ -5,12 +5,12 @@ using namespace std;
 
 class telephone
 {
-	private:
+private:
     char name[30], add[30];
     int calls, amount;
     long int  contact;
 
-	public:
+public:
     void display()
     {
     cout<<"Enter name : "<<endl;
