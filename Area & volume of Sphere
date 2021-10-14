@@ -1,0 +1,37 @@
+/* Write a Program to implement a sphere class with appropriate members and member function to find the surface area and the volume. */
+
+#include<iostream>
+using namespace std;
+
+class sphere
+{
+	private:
+		float pi=3.14, r, s_area, vol;
+
+	public:
+		void display()
+		{
+		cout<<"Enter the radius of sphere : "<<endl;
+		cin>>r;
+		
+		s_area = 4*pi*r*r;
+		vol = (4.0/3)*pi*r*r*r;
+		
+		cout<<"Surface area of sphere ="<< s_area<<endl<<"Volume of sphere = "<< vol<<endl;
+		}
+};
+
+int main()
+{
+sphere s;
+s.display();
+return 0;
+}
+
+/*
+OUTPUT:
+Enter the radius of sphere : 
+4
+Surface area of sphere =200.96
+Volume of sphere = 267.947
+*/
